@@ -11,6 +11,13 @@ Based on nthcomp; the thermally comptonized continuum model of Zdziarski, Johnso
 
 The XSPEC model function is written in C++ (compconv.cxx) but calls Fortran routines to perform the calculation (docompconf.f). The XSPEC model definition is in lmodel_comptonise.dat.
 
+Parameters
+----------
+1. Gamma    : Photon index of the produced continuum spectrum if >0, the optical depth is calculated automatically to reproduce this photon index from a black body seed spectrum based on the input value of kT. If frozen at -1, the spectrum will be computed for the specific optical depth that is input.
+2. Tau_e    : Optical depth due to Thomson scattering through the corona. If Gamma > 0, the input value will be ignored.
+3. kT_e     : Electron temperature in the corona
+4. Redshift : Applied to the output spectrum
+
 Installation
 ------------
 
