@@ -17,9 +17,10 @@ Installation
 The model is compiled using the initpackage command in XSPEC:
 
 XSPEC> cd comptonise/model/directory
+
 XSPEC> initpackage comp lmodel_comptonise.dat .
 
-Then can be loaded from the directory it is compiled in:
+Then can be loaded from the directory it is compiled in (it will need to be loaded every time XSPEC is started):
 
 XSPEC> lmod comp .
 
